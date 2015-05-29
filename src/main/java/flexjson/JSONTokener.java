@@ -492,11 +492,7 @@ public class JSONTokener {
 
     private void putOnce(Map<String, Object> jsonObject, String key, Object value) {
         if( key != null ) {
-            if( !jsonObject.containsKey(key) ) {
-                jsonObject.put( key, value );
-            } else {
-                throw new JSONException("Duplicate key \"" + key + "\"");
-            }
+            jsonObject.put(key, value);
         }
     }
 
